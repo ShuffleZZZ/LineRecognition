@@ -54,6 +54,6 @@
 
 Хранимая информация: 
 
-- Длина и точки концов и углов для каждой компоненты
+- Длина, точки концов и углов для каждой компоненты
 
 > статья: A Recognition Algorithm of Dashed and Chained Lines for Automatic Inputting of Drawings
