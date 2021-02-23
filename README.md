@@ -57,3 +57,32 @@
 - Длина, точки концов и углов для каждой компоненты
 
 > статья: A Recognition Algorithm of Dashed and Chained Lines for Automatic Inputting of Drawings
+
+## Методы с глубоким обучением
+
+### 1. Алгоритм распознавания чертежей на основе CNN
+
+- Использованные данные: электротехнические и машиностроительные чертежи с текстом (всего: 8000 обучающих и 900 тестовых)
+- Расширение датасета с помощью поворота и обрезания изображений, salt and pepper noise
+- Принимает RGB изображения 208х208, используются OpenCV и TensorFlow
+- 4 сверточных слоя, 4 max pooling слоя, 2 full connection слоя - dropout и SoftMax
+
+> статья: Engineering Drawing Recognition Model with Convolutional Neural Network
+
+### 2. Бинаризация зашумленных карт на основе CNN
+
+- Отделение фона по глобальному и локальному пороговому значению
+- 10 convolutional слоев, 5 deconvolutional слоев, 2 шага для четных слоев вместо pooling
+- Распознает граф линий в общем, без разбиения и классификации
+
+> статья: Novel and Effective CNN-Based Binarization for Historically Degraded As-built Drawing Maps
+
+### 3. Глубокая векторизация чертежей
+
+- Использованные данные: архитектурные планы, чертежи механических деталей, чертежи с шумом (всего  порядка 10 000)
+- Избавление от шума и восстановление компонент изображения + постпроцессинг \
+  Feed-forward NN
+- Предсказание компонент чертежа, итеративная оптимизация + heuristic merging \
+  Primitive Extraction Network
+
+> статья: Deep Vectorization of Technical Drawings
